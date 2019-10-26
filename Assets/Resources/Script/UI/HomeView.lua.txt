@@ -1,0 +1,8 @@
+
+
+
+function start( ... )
+	print("Start HomeView")
+	
+end
+
