@@ -26,6 +26,7 @@ namespace MyExamp
         }
         void InitHomeView()
         {
+            
             GameObject.Find("Canvas").AddComponent<MyLuaBehaviour>();
         }
     }

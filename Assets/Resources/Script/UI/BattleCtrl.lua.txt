@@ -1,8 +1,9 @@
-
+﻿
 
 
 function start( ... )
 	print("Start BattleCtrl")
-	
+	--用lua方式加载脚本
+	--CS.UnityEngine.GameObject.Find('Canvas'):AddComponent(typeof(CS.MyExamp.MyLuaBehaviour));
 end
 
