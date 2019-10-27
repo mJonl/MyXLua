@@ -51,20 +51,16 @@ namespace MyExamp
             {
                 LoardLuaScript(luaScript.text);
             }
+            else
+            {
+                InitLuaScript();
+            }
         }
 
         public void InitLuaScript()
         {
-
-            string scriptName = "";
-            if (Protocol.ScriptName.ContainsKey(gameObject.name))  
-            {
-                scriptName = Protocol.ScriptName[gameObject.name];
-            }
-            else
-            {
-                scriptName = string.Format("Script/UI/{0}.lua", gameObject.name);
-            }
+            Dictionary<string, string> d1 = GameCtrl.luaEnv.Global.Get<Dictionary<string, string>>("Pro_ScriptName");//映射到Dictionary<string, string>，by value
+            string scriptName = d1[gameObject.name];
             luaScript = Resources.Load<TextAsset>(scriptName);
             LoardLuaScript(luaScript.text);
         }

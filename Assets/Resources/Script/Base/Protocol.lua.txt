@@ -1,0 +1,7 @@
+﻿--lua脚本需要在这里配置：
+--key为GameObject名
+--value为路径名
+Pro_ScriptName = {
+		 Canvas			= "Script/UI/HomeView.lua", 
+		 BattleCtrl		= "Script/UI/BattleCtrl.lua",
+    }
