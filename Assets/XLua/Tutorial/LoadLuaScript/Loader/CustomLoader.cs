@@ -9,6 +9,8 @@
 using UnityEngine;
 using System.Collections;
 using XLua;
+using System.IO;
+using System.Text;
 
 namespace Tutorial
 {
@@ -26,9 +28,16 @@ namespace Tutorial
                     string script = "return {ccc = 9999}";
                     return System.Text.Encoding.UTF8.GetBytes(script);
                 }
+                if(filename == "Hello")
+                {
+                    string absPath = Application.dataPath + "/XLua/Tutorial/LoadLuaScript/Loader/" + filename + ".lua";
+                    string str = File.ReadAllText(absPath);
+                    return Encoding.UTF8.GetBytes(str);
+                }
                 return null;
             });
             luaenv.DoString("print('InMemory.ccc=', require('InMemory').ccc)");
+            luaenv.DoString("require('Hello')");
         }
 
         // Update is called once per frame
