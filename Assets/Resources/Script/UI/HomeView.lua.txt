@@ -1,8 +1,17 @@
 
-
-
+local mname
 function start( ... )
 	print("Start HomeView")
 	
 end
 
+
+function Hello(str)
+	
+	mname = str
+	Test()
+end
+
+function Test()
+	print("传参是： ", mname)
+end

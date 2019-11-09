@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,6 +29,7 @@ namespace MyExamp
         {
             
             GameObject.Find("Canvas").AddComponent<MyLuaBehaviour>();
+            GameObject.Find("Canvas").GetComponent<MyLuaBehaviour>().GetScriptEnv().Get<Action<string>>("Hello")("boy");
         }
     }
 }

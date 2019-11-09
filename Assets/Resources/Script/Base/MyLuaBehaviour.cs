@@ -28,6 +28,10 @@ namespace MyExamp
 
         private LuaTable scriptEnv;
 
+        public LuaTable GetScriptEnv()
+        {
+            return scriptEnv;
+        }
         private void Awake()
         {
             scriptEnv =  GameCtrl.luaEnv.NewTable();
