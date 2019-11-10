@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public static class UIMgr 
 {
    
-    //¶¯Ì¬´´½¨Í¼Æ¬ÓÃÕâ¸öº¯Êı,²ÎÊı1Í¼Æ¬Ãû³Æ£¬²ÎÊı2Îª¸¸ÀàTransForm
+
     public static void CreatImage(string img, Transform tran, ref GameObject go)
     {
         CreatImage(LoadSprite(img),tran, ref  go);
@@ -17,13 +17,13 @@ public static class UIMgr
         go.transform.parent = tran;
         go.transform.localScale = Vector3.one;
         Image image = go.AddComponent<Image>();
-        image.raycastTarget = false;//Ä¬ÈÏ²»½ÓÊÜµã»÷ÊÂ¼ş 
+        image.raycastTarget = false;//Ä¬ï¿½Ï²ï¿½ï¿½ï¿½ï¿½Üµï¿½ï¿½ï¿½Â¼ï¿½ 
         image.sprite = sprite;
         image.SetNativeSize();
     }
 
    
-    //»ñÈ¡SpriteÓÃÕâ¸öº¯Êı
+    
     public static Sprite LoadSprite(string spriteName)
     {
         return Resources.Load<GameObject>("Sprite/" + spriteName).GetComponent<SpriteRenderer>().sprite;
