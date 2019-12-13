@@ -2,7 +2,13 @@
 local mname
 function start( ... )
 	print("Start HomeView")
-	
+	local Test = CS.MyExamp.TestExp;
+	local test = Test();
+	test.index = 66;
+	print("gest.index---" .. test.index);
+	print('test.Add---' .. test.Add(test,1,2));
+	print('test.Add--' .. test:Add(3,4));
+	Test.StaFun("aaaaaaaaaaaaaaaaaaa")
 end
 
 
